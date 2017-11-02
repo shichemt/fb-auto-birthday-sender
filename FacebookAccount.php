@@ -101,32 +101,18 @@ class FacebookAccount {
                 
                 
                 $post_fields = "";
+                $fb_dtsg = preg_match ("/\<input type=\"hidden\" name=\"fb_dtsg\" value=\"(.*)\" autocomplete=\"off\" \/>/iUs", $content, $fb_dtsg_key);
+                $fb_dtsg = $fb_dtsg_key[1];
+                            
                 
-                if (preg_match_all ("/\<form method=\"post\" class=\"(.*)\" id=\"composer_form\" action=\"\/messages\/send\/\?icm=1&amp;refid=12\"\>(.*)\<\/form\>/iUs", $content, $forms) ) {
-                    
-                    //var_dump($forms[0][0]);
-                    
-                    if (preg_match_all("/\<input(.*)\/>/iUs", $forms[0][0], $inputs)) {
-                        
-                        
-                        //var_dump($inputs[0]);
-                        foreach ($inputs[0] as $input) {
-                            
-                            if (preg_match("/name=\"(.*)\"/iUs", $input, $name) && preg_match("/value=\"(.*)\"/iUs", $input, $value) && preg_match("/type=\"(.*)\"/iUs", $input, $types)) {
-                                
-                                if ($types[1] == "hidden")
-                                    $post_fields .= $name[1] . "=". $value[1] ."&";
-                            }
-                            
-                            
-                        }
-                        
-                        
-                    }
-                    
-                }
-                            
-                $post_fields .= "&body=".rawurlencode($message);    
+                $tids = preg_match ("/\<input type=\"hidden\" name=\"tids\" value=\"(.*)\" \/>/iUs", $content, $tids_key);
+                $tids = $tids_key[1];
+                
+                
+                $post_fields .= "fb_dtsg=".$fb_dtsg;
+                $post_fields .= "&tids=".$tids;
+                $post_fields .= "&body=".rawurlencode($message); 
+                $post_fields .= "&send=Send";   
                             
                 $ch = curl_init();  
                 curl_setopt($ch, CURLOPT_URL, "https://m.facebook.com/messages/send/?icm=1&amp;refid=12");  
