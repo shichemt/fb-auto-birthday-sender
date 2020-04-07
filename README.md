@@ -1,9 +1,9 @@
 Facebook Auto Birthday Sender
 ==============
 
-We all have a lot of Facebook friends and sometimes we do not have time to send 'Happy Birthday' wishes to them. This script is made for that purpose. **Auto-Pilot your happy-birthday-wishes to your Facebook friends**
+We all have a lot of Facebook friends and sometimes we do not have time to send 'Happy Birthday' wishes to them. This script was made for that purpose. **Auto-Pilot your happy-birthday-wishes to your Facebook friends**
 
-Tl;dr: Send generic 'Happy Birthday' private message to your Facebook friends when their birthday come. 
+Tl;dr: Send generic 'Happy Birthday' private message to your Facebook friends on their birthday. 
 
 Requirements:
 -------------
@@ -11,7 +11,7 @@ Requirements:
 - XAMP server / WAMP server
 - PHP (Obviously)
 - cURL (because file_get_contents is terrible)
-- Windows Task Scheduler / Schtaks (Windows people) | Cron (Linux people)
+- Windows Task Scheduler / Schtasks (Windows people) | Cron (Linux people)
 - Facebook account
 
 
