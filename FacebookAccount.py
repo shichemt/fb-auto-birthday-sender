@@ -10,7 +10,8 @@ FACEBOOK_XS  = ""; 	# Get Your Facebook XS from your cookies
 
 class FacebookAccount(object):
 	"""Facebook Auto Birthday Sender
-	   We all have a lot of Facebook friends and sometimes we do not have time to send 'Happy Birthday' wishes to them. This script was made for that purpose. Auto-Pilot your happy-birthday-wishes to your Facebook friends
+	   We all have a lot of Facebook friends and sometimes we do not have time to send 'Happy Birthday' wishes to them.
+	   This script was made for that purpose. Auto-Pilot your happy-birthday-wishes to your Facebook friends
 	"""
 	MAIN_URL 		= "https://m.facebook.com/home.php?sk=h_chr"
 	BIRTHDAY_URL    = "https://m.facebook.com/browse/birthdays/"
