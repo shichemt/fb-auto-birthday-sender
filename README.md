@@ -12,9 +12,9 @@ Tl;dr: Send generic 'Happy Birthday' private message to your Facebook friends on
 
 Change Log:
 -------------
-v0.3 - 20200507 : Ported the script to Python.
-v0.2 - 20200406 : Fixed couple bugs
-v0.1 - 20160605:  Initial release
+- v0.3 - 20200507 : Ported the script to Python.
+- v0.2 - 20200406 : Fixed couple bugs
+- v0.1 - 20160605:  Initial release
 
 Requirements:
 -------------
