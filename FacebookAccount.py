@@ -17,7 +17,6 @@ class FacebookAccount(object):
 	BIRTHDAY_URL    = "https://m.facebook.com/browse/birthdays/"
 	DEFAULT_USER_AGENT 	= 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:39.0) Gecko/20100101 Firefox/39.0'
 
-
 	def __init__(self, fb_xs, fb_cuser):
 		self.fb_xs = fb_xs
 		self.fb_cuser = fb_cuser
